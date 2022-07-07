@@ -1,0 +1,60 @@
+body {
+  margin: 15px;
+  font-family: sans-serif;
+}
+
+.card {
+  background-color: #b4b4b4;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: 7px 15px 20px #282828;
+}
+
+.avatar {
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.avatar img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+}
+
+.info span{
+    display: block;
+    width: fit-content;
+    margin: 1em 0;
+    padding: 0.25em 0.5em 0.25em 1em;
+    background-color: #282828;
+    color: #fff;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transform: translateX(-7px);
+    box-shadow: 1px 5px 2px #555;
+}
+
+.projects{
+    margin-bottom: 1em;
+}
+
+table{
+    margin: auto;
+    border-spacing: 10px;
+}
+
+tr a{
+    text-decoration: none;
+    background-color: #2e61cf;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+tr span{
+    font-weight: 700;
+    color: #444;
+}
