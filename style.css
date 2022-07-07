@@ -1,6 +1,7 @@
 body {
   margin: 15px;
   font-family: sans-serif;
+  background-image: url("https://www.transparenttextures.com/patterns/checkered-pattern.png");
 }
 
 .card {
