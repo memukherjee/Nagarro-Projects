@@ -1,14 +1,6 @@
 $(document).ready(function () {
-  $("#input").change(function () {
-    var input = $(this).val();
-    if (input !== "") {
-      $("ul").append(
-        "<li>" + input + '<i class="fas fa-check fa-trash "> </li>'
-      );
-      $(this).val("");
-    }
-  });
-  $("#add-btn").click(() => {
+
+  const addTask = ()=>{
     var input = $("#input").val();
     if (input !== "") {
       $("ul").append(
@@ -16,6 +8,13 @@ $(document).ready(function () {
       );
       $("#input").val("");
     }
+  }
+
+  $("#input").change(function () {
+    addTask();
+  });
+  $("#add-btn").click(() => {
+    addTask();
   });
   $("ul").on("click", ".fa-trash", function () {
     $(this).parent("li").fadeOut(200);
