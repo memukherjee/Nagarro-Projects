@@ -15,15 +15,14 @@ $(document).ready(() => {
 
   const usernameValidation = () => {
     let usernameValue = $("#username").val();
+    const usernameRegex = new RegExp(/^[a-z0-9_-]{3,10}$/gim);
     if (usernameValue.length === 0) {
       $("#username-validation").show();
       $("#username-validation").text("Username can't be empty");
       usernameError = true;
-    } else if (usernameValue.length < 3 || usernameValue.length > 10) {
+    } else if (!usernameRegex.test(usernameValue)) {
       $("#username-validation").show();
-      $("#username-validation").text(
-        "Username must be between 3-10 charachters"
-      );
+      $("#username-validation").text("Invalid Username");
       usernameError = true;
     } else {
       $("#username-validation").hide();
@@ -38,23 +37,22 @@ $(document).ready(() => {
 
   const emailValidation = () => {
     let emailValue = $("#email").val();
-    const emailRegex = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+    const emailRegex = new RegExp(
+      /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    );
     if (emailValue.length === 0) {
       $("#email-validation").show();
       $("#email-validation").text("Email id can't be empty");
       emailError = true;
     } else if (!emailRegex.test(emailValue)) {
       $("#email-validation").show();
-      $("#email-validation").text(
-        "Invalid Email id"
-      );
+      $("#email-validation").text("Invalid Email id");
       emailError = true;
     } else {
       $("#email-validation").hide();
       emailError = false;
     }
   };
-
 
   //PASSWORD
   $("#password").keyup(() => {
@@ -63,7 +61,9 @@ $(document).ready(() => {
 
   const passwordValidation = () => {
     let passwordValue = $("#password").val();
-    const strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+    const strongRegex = new RegExp(
+      "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})"
+    );
     if (passwordValue.length === 0) {
       $("#password-validation").show();
       $("#password-validation").text("Password can't be empty");
@@ -77,7 +77,6 @@ $(document).ready(() => {
       passwordError = false;
     }
   };
-
 
   //CONFIRM PASSWORD
   $("#confirmpassword").keyup(() => {
@@ -93,7 +92,9 @@ $(document).ready(() => {
       confirmPasswordError = true;
     } else if (passwordValue !== confirmPasswordValue) {
       $("#confirmpassword-validation").show();
-      $("#confirmpassword-validation").text("Password and Confirm Password needs to be same");
+      $("#confirmpassword-validation").text(
+        "Password and Confirm Password needs to be same"
+      );
       confirmPasswordError = true;
     } else {
       $("#confirmpassword-validation").hide();
@@ -101,16 +102,14 @@ $(document).ready(() => {
     }
   };
 
-
   //SUBMIT
-  $('#submit-btn').click(()=>{
+  $("#submit-btn").click(() => {
     usernameValidation();
     emailValidation();
     passwordValidation();
     confirmPasswordValidation();
-    if(usernameError || emailError || passwordError || confirmPasswordError){
-        return false;
+    if (usernameError || emailError || passwordError || confirmPasswordError) {
+      return false;
     }
-  })
-
+  });
 });
