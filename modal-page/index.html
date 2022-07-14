@@ -15,30 +15,35 @@
   </head>
   <body>
     <div class="text-center my-5">
-      <button class="clicks btn btn-dark btn-lg">Click Me</button>
+      <button class="clicks">Click Me</button>
     </div>
     <div class="container px-4 py-5 rounded text-white" id="box">
-      <button id="close-btn" class="close"><i class="fa-solid fa-xmark"></i></button>
-      <div class="one">
+      <button id="close-btn" class="close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div>
         <h3 class="text-center display-5">Enter details</h3>
-        <form action="#">
+        <form action="/">
           <div class="form-group mb-3">
-            <label for="username" class="lead mb-1">Email</label>
-            <input type="email" name="email" id="email" class="form-control" />
-          </div>
-          <div class="form-group mb-3">
-            <label for="email" class="lead mb-1">Username</label>
+            <label for="username" class="lead mb-1">Username</label>
             <input
               type="text"
               name="username"
               id="username"
               class="form-control"
             />
+            <p class="small" id="username-warning"></p>
+          </div>
+          <div class="form-group mb-3">
+            <label for="email" class="lead mb-1">Email id</label>
+            <input type="email" name="email" id="email" class="form-control" />
+            <p class="small" id="email-warning"></p>
           </div>
           <input
-            type="button"
+            type="submit"
             value="Submit"
-            class="close btn btn-light btn block"
+            id="submit-btn"
+            class="btn btn-light"
           />
         </form>
       </div>
