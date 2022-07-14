@@ -1,0 +1,16 @@
+body{
+    background-image: url("https://www.transparenttextures.com/patterns/crissxcross.png");
+}
+
+#box{
+    background-color: #bc6b6b;
+    opacity: 0;
+    background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
+    max-width: 600px;
+    box-shadow: 0 7px 25px #000;
+    transition: all 0.5s;
+}
+
+#box.show{
+    opacity: 1;
+}
