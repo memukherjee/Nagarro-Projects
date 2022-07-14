@@ -40,25 +40,5 @@ http
       .catch((err) => {
         console.log(err);
       });
-    // function (err, res, body) {
-    //   var data = JSON.parse(body);
-    //   console.log(data);
-    //   response.write(`<html>
-    //                         <head>
-    //                             <title>Weather</title>
-    //                         </head>
-    //                         <body>
-    //                             <div id='container'>
-    //                                 <h1> Visibility - : + data[visibilty] <h1>
-    //                                 <h1> Visibility - : + data[corrdinates] <h1>
-    //                                 <h1> Visibility - : + data[temperature] <h1>
-    //                                 <h1> Visibility - : + data[sunser time] <h1>
-    //                                 <h1> Visibility - : + data[sun rise] <h1>
-    //                             </div>
-    //                         </body>
-    //                     </html>`);
-
-    //   response.end();
-    // }
   })
   .listen(3000, () => console.log("Running on port 3000"));
