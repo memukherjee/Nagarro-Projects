@@ -1,0 +1,118 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  text-align: center;
+  font-family: sans-serif;
+  background-color: #c98eda;
+  transition: background-color 0.5s;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
+}
+
+.slides {
+  width: 95%;
+  max-width: 900px;
+  position: relative;
+  margin: auto;
+  margin-top: 2em;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.slide {
+  display: none;
+}
+
+.slide-img {
+  width: 100%;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  max-width: fit-content;
+  text-transform: capitalize;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5em 0.75em;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  transform: translateY(-70px);
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  cursor: pointer;
+}
+
+.caption span {
+  overflow-wrap: break-word;
+}
+
+.arrow-btn {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  color: rgba(255, 255, 255, 0.69);
+  font-size: 4rem;
+  position: absolute;
+  padding: 0 10px;
+  border-radius: 15px;
+  top: 50%;
+  transform: translateY(-70%);
+}
+
+.arrow-btn:hover {
+  color: rgba(71, 71, 71, 0.7);
+}
+
+#left {
+  left: 20px;
+}
+#right {
+  right: 20px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 25px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.dot:hover {
+  background-color: #666;
+}
+
+.active-dot {
+  background-color: #333;
+}
+
+.visible {
+  animation: slide-in 0.5s forwards;
+  display: block;
+}
+
+.slide-out {
+  animation: slide-out 0.25s forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

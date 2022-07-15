@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Image Slider</title>
+  </head>
+  <body>
+    <div class="slides">
+      <div class="slide visible">
+        <img src="./images/IMG_1.jpg" alt="" class="slide-img" />
+        <div class="caption">
+          <span>Another sunrise, another new beginning</span>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="./images/IMG_2.jpg" alt="" class="slide-img" />
+        <div class="caption">
+          <span>There's always light after the dark</span>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="./images/IMG_3.jpg" alt="" class="slide-img" />
+        <div class="caption">
+          <span>Brighten up the future and fill it with colours</span>
+        </div>
+      </div>
+      <button class="arrow-btn" id="left">
+        <i class="fa-solid fa-caret-left"></i>
+      </button>
+      <button class="arrow-btn" id="right">
+        <i class="fa-solid fa-caret-right"></i>
+      </button>
+    </div>
+    <div class="show-index">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/95f68113d2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
