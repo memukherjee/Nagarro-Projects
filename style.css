@@ -25,6 +25,24 @@ body {
   color: #4e4e4e;
 }
 
+@media (max-width: 400px){
+  .about{
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 345px){
+  .about{
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 300px){
+  .about{
+    font-size: 0.8rem;
+  }
+}
+
 .about span{
   color: #2e61cf;
   font-weight: 600;
