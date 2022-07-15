@@ -7,11 +7,27 @@ body {
 .card {
   background-color: #b4b4b4;
   max-width: 400px;
+  height: 650px;
   display: flex;
   flex-direction: column;
   margin: auto;
   border-radius: 20px;
   transition: box-shadow 1s ease;
+}
+
+.about-data{
+  text-align: center;
+  margin: 1em 1.5em;
+}
+.about{
+  font-size: 1.1rem;
+  font-family: monospace;
+  color: #4e4e4e;
+}
+
+.about span{
+  color: #2e61cf;
+  font-weight: 600;
 }
 
 .avatar {
@@ -118,7 +134,7 @@ tfoot tr td{
   opacity: 1;
 }
 
-.cardFront .project-images{
+.cardFront .about-data{
   display: none;
   opacity: 0;
 }
@@ -134,10 +150,9 @@ tfoot tr td{
   animation: opacityDecrease 2s forwards;
 }
 
-.cardTurningBack .project-images{
-  animation: opacityIncrease 2s forwards;
+.cardTurningBack .about-data{
   opacity: 0;
-  display: block;
+  display: none;
 }
 
 .cardBack{
@@ -152,9 +167,8 @@ tfoot tr td{
   display: none;
 }
 
-.cardBack .project-images{
-  opacity: 1;
-  display: block;
+.cardBack .about-data{
+  animation: opacityIncrease 1s forwards;
   transform: rotateY(180deg);
 }
 
@@ -171,8 +185,14 @@ tfoot tr td{
   animation: opacityIncrease 1s forwards 1s;
 }
 
-.cardTurningFront .project-images{
-  animation: opacityDecrease 1s forwards;
+.cardTurningFront .about-data{
+  opacity: 0;
+  display: none;
+}
+
+.hide-about{
+  transition: opacity .5s;
+  opacity: 0;
 }
 
 @keyframes opacityIncrease {
@@ -193,6 +213,21 @@ tfoot tr td{
   }
   100%{
     opacity: 0;
+  }
+}
+
+@keyframes opacityDecrease2 {
+  0%{
+    opacity: 1;
+    height: 100%;
+  }
+  50%{
+    opacity: 0;
+    height: 30%;
+  }
+  100%{
+    opacity: 0;
+    height: 0;
   }
 }
 

@@ -1,17 +1,22 @@
 const card = document.querySelector(".card");
-const avatar = document.querySelector(".avatar");
-const info = document.querySelector(".info");
-const projects = document.querySelector(".projects");
-
+const about = document.querySelector(".about");
 function turnFront() {
-  card.classList.add("cardTurningFront");
-  card.classList.remove("cardBack");
-
-  card.addEventListener(
-    "animationend",
+  about.classList.add("hide-about");
+  about.addEventListener(
+    "transitionend",
     () => {
-      card.classList.add("cardFront");
-      card.classList.remove("cardTurningFront");
+      card.classList.add("cardTurningFront");
+      card.classList.remove("cardBack");
+      about.classList.remove("hide-about");
+
+      card.addEventListener(
+        "animationend",
+        () => {
+          card.classList.add("cardFront");
+          card.classList.remove("cardTurningFront");
+        },
+        { once: true }
+      );
     },
     { once: true }
   );
