@@ -1,0 +1,14 @@
+<%- include("partials/header") %>
+<div class="card">
+  <h1 class="display-4 wiki-title"><%= data.title %></h1>
+  <p class="wiki-data">
+    <%= data.extract %>
+    <a class="wiki-link"
+        href=<%= link %> 
+        target="_blank" 
+        rel="noopener noreferrer"
+    >know more</a>
+</p>
+</div>
+
+<%- include("partials/footer") %>

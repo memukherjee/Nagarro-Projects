@@ -1,0 +1,73 @@
+html,
+body {
+  height: 100%;
+}
+
+body{
+    background-image: url("https://www.transparenttextures.com/patterns/green-fibers.png");
+}
+
+::selection {
+  background-color: #bababab6;
+}
+
+.container {
+  max-width: 750px;
+}
+
+#search-input{
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(1px);
+    border: 0;
+    box-shadow: none;
+}
+
+.card {
+  background-color: transparent;
+  min-height: 100%;
+  padding: 10px;
+  padding-bottom: 40px;
+}
+
+.wiki-title {
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  width: max-content;
+  max-width: 100%;
+  margin: 25px auto;
+  padding: 0.15em 0.5em;
+  overflow-wrap: break-word;
+}
+
+.wiki-data {
+  max-width: 750px;
+  text-align: justify;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.wiki-link {
+  text-decoration: none;
+  color: #1c67c9;
+}
+
+.wiki-link:hover {
+  color: #131c60;
+}
+
+footer {
+  font-size: 0.75rem;
+  color: #999;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+}
+
+@media (max-width: 400px) {
+  footer {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2px);
+  }
+}
