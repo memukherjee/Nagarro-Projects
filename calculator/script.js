@@ -11,12 +11,10 @@ for (var i = 0; i < number.length; i++) {
     var currentString = input.innerHTML;
     var lastChar = currentString[currentString.length - 1];
 
-    // if result is not diplayed, just keep adding
     if (resultDisplayed === false) {
       input.innerHTML += e.target.innerHTML;
     } else if (resultDisplayed === true && lastChar === "+" || lastChar === "-" || lastChar === "×" || lastChar === "÷") {
-      // if result is currently displayed and user pressed an operator
-      // we need to keep on adding to the string for next operation
+
       resultDisplayed = false;
       input.innerHTML += e.target.innerHTML;
     } else {
@@ -28,11 +26,9 @@ for (var i = 0; i < number.length; i++) {
   });
 }
 
-// adding click handlers to number buttons
 for (var i = 0; i < operator.length; i++) {
   operator[i].addEventListener("click", function(e) {
 
-    // storing current input string and its last character in variables - used later
     var currentString = input.innerHTML;
     var lastChar = currentString[currentString.length - 1];
 
@@ -55,10 +51,9 @@ result.addEventListener("click", function() {
 
   var operators = inputString.replace(/[0-9]|\./g, "").split("");
 
-  console.log(inputString);
-  console.log(operators);
-  console.log(numbers);
-  console.log("----------------------------");
+  // console.log(inputString);
+  // console.log(operators);
+  // console.log(numbers);
 
   var divide = operators.indexOf("÷");
   while (divide != -1) {
@@ -83,18 +78,16 @@ result.addEventListener("click", function() {
 
   var add = operators.indexOf("+");
   while (add != -1) {
-    // using parseFloat is necessary, otherwise it will result in string concatenation :)
     numbers.splice(add, 2, parseFloat(numbers[add]) + parseFloat(numbers[add + 1]));
     operators.splice(add, 1);
     add = operators.indexOf("+");
   }
 
-  input.innerHTML = numbers[0]; // displaying the output
+  input.innerHTML = numbers[0];
 
-  resultDisplayed = true; // turning flag if result is displayed
+  resultDisplayed = true;
 });
 
-// clearing the input on press of clear
 clear.addEventListener("click", function() {
   input.innerHTML = "";
 })
