@@ -1,0 +1,45 @@
+<%- include('partials/header'); -%> 
+    <main>
+      <div class="container py-4">
+        <header class="py-3 mb-4 border-bottom d-flex justify-content-between flex-wrap align-items-center">
+          <a
+            href="/"
+            class="d-flex align-items-center text-dark text-decoration-none m-auto mb-3 m-md-0"
+          >
+            <i class="fa-2x fa-solid fa-face-grin-tongue-wink me-2"></i>
+            <span class="fs-4">Random Jokes</span>
+          </a>
+          <div class="search-bar d-flex align-items-center m-auto m-md-0">
+            <input type="text" placeholder="find jokes by id" name="search-id" class="form-control" id="search-input" autocomplete="off">
+            <button class="btn btn-dark rounded-circle ms-2" id="search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </header>
+
+        <div class="p-5 mb-5 bg-dark text-light rounded-3">
+          <div class="container-fluid py-5 position-relative">
+            <h1 class="display-4 fw-bold" id="joke-title">Joke #X</h1>
+            <span class="col-md-8 fs-4 text-secondary" id="joke">
+                <div class="spinner-border text-light" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </span>
+            <button
+              id="reload-btn"
+              class="btn btn-light text-dark rounded-circle"
+              type="button"
+            >
+              <i class="fa-solid fa-arrow-rotate-right"></i>
+            </button>
+          </div>
+        </div>
+        <footer class="pt-3 mt-4 text-muted border-top text-center">
+          <span>&copy; <%= new Date().getFullYear() %> </span>
+        </footer>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+
+
+<%- include('partials/footer'); -%> 

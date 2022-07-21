@@ -1,0 +1,23 @@
+#reload-btn{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+#reload-btn.rotate{
+    animation: rotate360 1s forwards;
+}
+
+#joke{
+    word-break: break-all;
+    white-space: normal;
+}
+
+@keyframes rotate360 {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,29 @@
+<%- include('partials/header'); -%>
+<main>
+  <div class="container py-4">
+    <header class="pb-3 mb-4 border-bottom">
+      <a
+        href="/"
+        class="d-flex align-items-center text-dark text-decoration-none"
+      >
+        <i class="fa-2x fa-solid fa-face-grin-tongue-wink me-2"></i>
+        <span class="fs-4 lead fw-bold">#<%= id %> </span>
+      </a>
+    </header>
+
+    <div class="p-5 mb-5 bg-dark text-light rounded-3">
+      <div class="container-fluid py-5 position-relative">
+        <h1 class="display-4 fw-bold" id="joke-title">Joke #<%= id %></h1>
+        <span class="col-md-8 fs-4 text-secondary" id="joke">
+          <%= joke %>
+        </span>
+      </div>
+    </div>
+
+    <footer class="pt-3 mt-4 text-muted border-top text-center">
+      <span>&copy; <%= new Date().getFullYear() %> </span>
+    </footer>
+  </div>
+</main>
+
+<%- include('partials/footer'); -%>
