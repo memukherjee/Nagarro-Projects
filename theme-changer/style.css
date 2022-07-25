@@ -1,0 +1,50 @@
+.black{
+    --bg-color: #222;
+    --border: #fff;
+    --text: #fff;
+}
+
+.green{
+    --bg-color: rgb(47, 171, 41);
+    --border: #000;
+    --text: #000;
+}
+
+.yellow{
+    --bg-color: rgb(233, 255, 67);
+    --border: #000;
+    --text: #000;
+}
+
+.blue{
+    --bg-color: rgb(39, 107, 191);
+    --border: #fff;
+    --text: #fff;
+}
+
+.btn{
+    max-width: fit-content;
+}
+
+hr{
+    margin: 0;
+}
+
+.theme-container{
+    background-color: var(--bg-color);
+    width: 100vw;
+    margin: 0;
+    padding: 2em;
+}
+
+#text{
+    border: 2px solid var(--border);
+    background-color: var(--bg-color);
+    color: var(--text);
+    width: 100%;
+    max-width: 700px;
+    min-height: 400px;
+    margin: auto;
+    outline: none;
+    box-shadow: none;
+}
