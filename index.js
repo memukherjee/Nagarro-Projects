@@ -36,7 +36,7 @@ async function turnBack() {
 }
 
 card.addEventListener("click", (e) => {
-  if (!e.target.classList.contains("project-link")) {
+  if (!e.target.parentElement.classList.contains("project-link")) {
     if (card.classList.contains("cardFront")) {
       turnBack();
     } else if (card.classList.contains("cardBack")) {
