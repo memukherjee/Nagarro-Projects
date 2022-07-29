@@ -27,6 +27,7 @@ body {
   font-family: sans-serif;
   background-color: var(--background);
   background-image: url("https://www.transparenttextures.com/patterns/checkered-pattern.png");
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 #darkmode{
