@@ -35,3 +35,29 @@ function loadDoc(filename, e) {
     navChange(e.target);
   }
 }
+
+// Modal
+function showModal(element) {
+  document.querySelector("#box").classList.toggle("show");
+  if(element.target.nextElementSibling.firstElementChild!==null){
+    document.querySelector("#project-frame").style.display = "block";
+    document.querySelector("#nothing").style.display = "none";
+    const frameLink = element.target.nextElementSibling.firstElementChild.href;
+    document.querySelector("#project-frame").src = frameLink;
+  }
+  else{
+    document.querySelector("#project-frame").style.display = "none";
+    document.querySelector("#nothing").style.display = "Block";
+  }
+}
+function closeModal() {
+  document.querySelector("#box").classList.remove("show");
+  document.querySelector("#box").classList.add("closing");
+  document.querySelector("#box").addEventListener(
+    "animationend",
+    () => {
+      document.querySelector("#box").classList.remove("closing");
+    },
+    { once: true }
+  );
+}

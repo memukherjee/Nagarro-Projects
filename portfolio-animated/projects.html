@@ -1,5 +1,615 @@
-<iframe
-  id="projects"
-  src="https://memukherjee.github.io/Nagarro-Projects/"
-  frameborder="0"
-></iframe>
+<div class="modal" id="box">
+  <button id="close-btn" onclick="closeModal()" class="close">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+  <div>
+    <h1 id="nothing" style="display: none;">Nothing to Show Here.</h1>
+    <iframe id="project-frame" src="" frameborder="0"></iframe>
+  </div>
+</div>
+<div class="projects">
+    <h3>Click on project to view the project</h3>
+  <table>
+    <tbody>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>Pokemon Website</span>
+        </td>
+        <td>
+          <a
+            href="https://memukherjee.github.io/Nagarro-Projects/pokemon"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+            ><i class="fa-solid fa-link"></i
+          ></a>
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/pokemon"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>Portfolio Website</span>
+        </td>
+        <td>
+          <a
+            href="https://memukherjee.github.io/Nagarro-Projects/portfolio"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-link"></i
+          ></a>
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/portfolio"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>Product Page (Tailwind Project)</span>
+        </td>
+        <td>
+          <a
+            href="https://memukherjee.github.io/Nagarro-Projects/tailwind-project-flora"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-link"></i
+          ></a>
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/tailwind-project-flora"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>To-Do App (jQuery Project)</span>
+        </td>
+        <td>
+          <a
+            href="https://memukherjee.github.io/Nagarro-Projects/ToDoApp-jQuery"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-link"></i
+          ></a>
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/ToDoApp-jQuery"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>Form Validation (Bootstrap + jQuery)</span>
+        </td>
+        <td>
+          <a
+            href="https://memukherjee.github.io/Nagarro-Projects/jQuery-form-validation"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-link"></i
+          ></a>
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/jQuery-form-validation"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>Number facts app</span>
+        </td>
+        <td>
+          <a
+            href="https://memukherjee.github.io/Nagarro-Projects/number-fact-api-project"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-link"></i
+          ></a>
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/number-fact-api-project"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>Cricket Score App</span>
+        </td>
+        <td>
+          <a
+            href="https://memukherjee.github.io/Nagarro-Projects/cricket-score-app"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-link"></i
+          ></a>
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/cricket-score-app"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>Pokemon (sent from backend)</span>
+        </td>
+        <td>
+          <!-- <a
+                href="#"
+                target="_blank"
+                class="project-link"
+                rel="noopener noreferrer"
+                ><i class="fa-solid fa-link"></i
+              ></a> -->
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/pokemon-backend"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>To-Do App (JS Project)</span>
+        </td>
+        <td>
+          <a
+            href="https://memukherjee.github.io/Nagarro-Projects/ToDoApp-JS"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-link"></i
+          ></a>
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/ToDoApp-JS"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>Copy to Clipboard</span>
+        </td>
+        <td>
+          <a
+            href="https://memukherjee.github.io/Nagarro-Projects/copy-text"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-link"></i
+          ></a>
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/copy-text"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>Weather Site</span>
+        </td>
+        <td>
+          <!-- <a
+                href="#"
+                target="_blank"
+                class="project-link"
+                rel="noopener noreferrer"
+                ><i class="fa-solid fa-link"></i
+              ></a> -->
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/weather-api-site"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>Modal Page</span>
+        </td>
+        <td>
+          <a
+            href="https://memukherjee.github.io/Nagarro-Projects/modal-page"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-link"></i
+          ></a>
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/modal-page"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>Wiki App (EJS project)</span>
+        </td>
+        <td>
+          <a
+            href="https://wiki-app-ejs.herokuapp.com/"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-link"></i
+          ></a>
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/wiki-app-ejs"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>Image Slider</span>
+        </td>
+        <td>
+          <a
+            href="https://memukherjee.github.io/Nagarro-Projects/image-slider"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-link"></i
+          ></a>
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/image-slider"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>MongoDB Connection</span>
+        </td>
+        <td>
+          <!-- <a
+                href="https://wiki-app-ejs.herokuapp.com/"
+                target="_blank"
+                class="project-link"
+                rel="noopener noreferrer"
+                ><i class="fa-solid fa-link"></i
+              ></a> -->
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/express-mongodb-connection"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>MySQL Connection</span>
+        </td>
+        <td>
+          <!-- <a
+                href="https://wiki-app-ejs.herokuapp.com/"
+                target="_blank"
+                class="project-link"
+                rel="noopener noreferrer"
+                ><i class="fa-solid fa-link"></i
+              ></a> -->
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/express-mysql-connection"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>Passport Auth</span>
+        </td>
+        <td>
+          <!-- <a
+                href="https://wiki-app-ejs.herokuapp.com/"
+                target="_blank"
+                class="project-link"
+                rel="noopener noreferrer"
+                ><i class="fa-solid fa-link"></i
+              ></a> -->
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/express-passport-auth"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>Calculator</span>
+        </td>
+        <td>
+          <a
+            href="https://memukherjee.github.io/Nagarro-Projects/calculator"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-link"></i
+          ></a>
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/calculator"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>Weight Convertor</span>
+        </td>
+        <td>
+          <a
+            href="https://memukherjee.github.io/Nagarro-Projects/weight-conversion"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-link"></i
+          ></a>
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/weight-conversion"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>Jokes fetch & store project</span>
+        </td>
+        <td>
+          <a
+            href="https://jokes-api-site.herokuapp.com/"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-link"></i
+          ></a>
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/jokes-api-storing"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>OMDB Movie Finder</span>
+        </td>
+        <td>
+          <a
+            href="https://memukherjee.github.io/Nagarro-Projects/OMDB-api"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-link"></i
+          ></a>
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/OMDB-api"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>Search Bar Project</span>
+        </td>
+        <td>
+          <a
+            href="https://memukherjee.github.io/Nagarro-Projects/js-searchbar"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-link"></i
+          ></a>
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/js-searchbar"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>Theme Changer Project</span>
+        </td>
+        <td>
+          <a
+            href="https://memukherjee.github.io/Nagarro-Projects/theme-changer"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-link"></i
+          ></a>
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/theme-changer"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>Twitter Sign Up Page</span>
+        </td>
+        <td>
+          <a
+            href="https://memukherjee.github.io/Nagarro-Projects/twitter-signup-page"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-link"></i
+          ></a>
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/twitter-signup-page"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>Animated Portfolio</span>
+        </td>
+        <td>
+          <a
+            href="https://memukherjee.github.io/Nagarro-Projects/portfolio-animated"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-link"></i
+          ></a>
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/portfolio-animated"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+      <tr class="project">
+        <td onclick="showModal(event)">
+          <span>SMTP Project</span>
+        </td>
+        <td>
+          <a
+            href="https://memukherjee.github.io/Nagarro-Projects/smtp-project"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-solid fa-link"></i>
+          </a>
+        </td>
+        <td>
+          <a
+            href="https://github.com/memukherjee/Nagarro-Projects/tree/main/smtp-project"
+            target="_blank"
+            class="project-link"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-code"></i
+          ></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
