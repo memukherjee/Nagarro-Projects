@@ -557,3 +557,17 @@ footer {
     max-width: 600px;
   }
 }
+
+/* Projects */
+
+#projects{
+  margin: 0;
+  margin-top: -6rem;
+  width: 100%;
+  width: 400px;
+  height: 680px;
+  transform: scale(.75);
+  border-radius: 20px;
+  animation: fadein .5s ease-in;
+  position: absolute;
+}
