@@ -18,11 +18,11 @@ setInterval(() => {
 const navLinks = document.querySelectorAll(".nav-link");
 
 loadDoc("home");
-loadDoc('about');
-loadDoc('skills');
-loadDoc('projects');
-loadDoc('contact');
-loadDoc('education');
+loadDoc("about");
+loadDoc("skills");
+loadDoc("projects");
+loadDoc("contact");
+loadDoc("education");
 
 function navChange(elementIndex) {
   document.querySelector(".active-nav").classList.remove("active-nav");
@@ -43,15 +43,24 @@ function loadDoc(filename) {
 // Modal
 function showModal(element) {
   document.querySelector("#box").classList.toggle("show");
-  if(element.target.nextElementSibling.firstElementChild!==null){
-    document.querySelector("#project-frame").style.display = "block";
-    document.querySelector("#nothing").style.display = "none";
+  const frameMsg = document.querySelector("#frame-message");
+  const projectFrame = document.querySelector("#project-frame");
+  if (element.target.nextElementSibling.firstElementChild !== null) {
+    projectFrame.style.display = "none";
+    frameMsg.innerHTML = "Loading...";
+    frameMsg.style.display = "Block";
     const frameLink = element.target.nextElementSibling.firstElementChild.href;
-    document.querySelector("#project-frame").src = frameLink;
-  }
-  else{
-    document.querySelector("#project-frame").style.display = "none";
-    document.querySelector("#nothing").style.display = "Block";
+    console.log(frameLink);
+    projectFrame.src = frameLink;
+    projectFrame.onload = function () {
+      console.log("loaded");
+      projectFrame.style.display = "block";
+      frameMsg.style.display = "none";
+    };
+  } else {
+    projectFrame.style.display = "none";
+    frameMsg.innerHTML = "Nothing to Show Here.";
+    frameMsg.style.display = "Block";
   }
 }
 function closeModal() {
@@ -66,31 +75,74 @@ function closeModal() {
   );
 }
 
-
 window.addEventListener("scroll", (e) => {
-  if(window.pageYOffset>100){
+  if (window.pageYOffset > 100) {
     document.querySelector(".navbar").classList.add("navbar-transparent");
     document.querySelector(".go-to-top-btn").classList.add("visible-btn");
-  }
-  else{
+  } else {
     document.querySelector(".navbar").classList.remove("navbar-transparent");
     document.querySelector(".go-to-top-btn").classList.remove("visible-btn");
   }
 
-  if(window.pageYOffset<(document.querySelector("#about").offsetTop*0.3)){
+  if (window.pageYOffset < document.querySelector("#about").offsetTop * 0.3) {
     navChange(0);
-  }
-  else if(window.pageYOffset<(document.querySelector("#skills").offsetTop*0.7)){
+  } else if (
+    window.pageYOffset <
+    document.querySelector("#skills").offsetTop * 0.7
+  ) {
     navChange(1);
-  }
-  else if(window.pageYOffset<(document.querySelector("#projects").offsetTop*0.8)){
+  } else if (
+    window.pageYOffset <
+    document.querySelector("#projects").offsetTop * 0.8
+  ) {
     navChange(2);
-  }
-  else if(window.pageYOffset<(document.querySelector("#contact").offsetTop*0.8)){
+  } else if (
+    window.pageYOffset <
+    document.querySelector("#contact").offsetTop * 0.8
+  ) {
     navChange(3);
-  }
-  else{
+  } else {
     navChange(4);
   }
-
 });
+
+showAlert("Welcome to my Portfolio!");
+
+function showAlert(message) {
+  const alertBox = document.querySelector("#alert-box");
+  alertBox.innerHTML = message;
+  alertBox.classList.add("show");
+  setTimeout(() => {
+    alertBox.classList.remove("show");
+    alertBox.classList.add("closing");
+    alertBox.addEventListener("animationend", () => {
+      alertBox.classList.remove("closing");
+    },{once:true});
+  }, 4000);
+}
+
+// Send Email
+function sendMail(e) {
+  const name = document.querySelector("#name");
+  const email = document.querySelector("#email");
+  const message = document.querySelector("#message");
+  const token = "903f6cf4-d6d5-4291-a279-e9c511abd0ea";
+
+  console.log(name, email, message);
+
+  e.preventDefault();
+  Email.send({
+    SecureToken: token,
+    To: "akash3.11.2000@gmail.com,"+email.value,
+    From: "akash3.11.2000@gmail.com",
+    Subject: `Message from ${name.value}`,
+    Body: message.value
+  })
+    .then((message) => {
+      showAlert(message);
+      email.value = "";
+      name.value = "";
+      message.value = "";
+    })
+    .catch((err) => console.log(err));
+}
