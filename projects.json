@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Pokemon Website",
+    "site_url": "/pokemon",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/pokemon"
+  },
+  {
+    "name": "Portfolio Website",
+    "site_url": "/portfolio",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/portfolio"
+  },
+  {
+    "name": "Product Page (Tailwind Project)",
+    "site_url": "/tailwind-project-flora",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/tailwind-project-flora"
+  },
+  {
+    "name": "To-Do App (JQuery Project)",
+    "site_url": "/ToDoApp-jQuery",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/ToDoApp-jQuery"
+  },
+  {
+    "name": "Form Validation (Bootstrap + JQuery)",
+    "site_url": "/jQuery-form-validation",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/jQuery-form-validation"
+  },
+  {
+    "name": "Number Facts App",
+    "site_url": "/number-fact-api-project",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/number-fact-api-project"
+  },
+  {
+    "name": "Cricket Score App",
+    "site_url": "/cricket-score-app",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/cricket-score-app"
+  },
+  {
+    "name": "Pokemon (Sent From Backend)",
+    "site_url": "",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/pokemon-backend"
+  },
+  {
+    "name": "To-Do App (JS Project)",
+    "site_url": "/ToDoApp-JS",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/ToDoApp-JS"
+  },
+  {
+    "name": "Copy To Clipboard",
+    "site_url": "/copy-text",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/copy-text"
+  },
+  {
+    "name": "Weather Site",
+    "site_url": "",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/weather-api-site"
+  },
+  {
+    "name": "Modal Page",
+    "site_url": "/modal-page",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/modal-page"
+  },
+  {
+    "name": "Wiki App (EJS Project)",
+    "site_url": "https://wiki-app-ejs.herokuapp.com/",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/wiki-app-ejs"
+  },
+  {
+    "name": "Image Slider",
+    "site_url": "/image-slider",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/image-slider"
+  },
+  {
+    "name": "MongoDB Connection",
+    "site_url": "",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/express-mongodb-connection"
+  },
+  {
+    "name": "MySQL Connection",
+    "site_url": "",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/express-mysql-connection"
+  },
+  {
+    "name": "Passport Auth",
+    "site_url": "",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/express-passport-auth"
+  },
+  {
+    "name": "Calculator",
+    "site_url": "/calculator",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/calculator"
+  },
+  {
+    "name": "Weight Convertor",
+    "site_url": "/weight-conversion",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/weight-conversion"
+  },
+  {
+    "name": "Jokes Fetch & Store Project",
+    "site_url": "https://jokes-api-site.herokuapp.com/",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/jokes-api-storing"
+  },
+  {
+    "name": "OMDB Movie Finder",
+    "site_url": "/OMDB-api",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/OMDB-api"
+  },
+  {
+    "name": "Search Bar Project",
+    "site_url": "/js-searchbar",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/js-searchbar"
+  },
+  {
+    "name": "Theme Changer Project",
+    "site_url": "/theme-changer",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/theme-changer"
+  },
+  {
+    "name": "Twitter Sign Up Page",
+    "site_url": "/twitter-signup-page",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/twitter-signup-page"
+  },
+  {
+    "name": "Scrollable Portfolio",
+    "site_url": "/portfolio-scrollable",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/portfolio-scrollable"
+  },
+  {
+    "name": "SMTP Project",
+    "site_url": "/smtp-project",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/smtp-project"
+  },
+  {
+    "name": "E-Commerce Website Clone (BoAt)",
+    "site_url": "/ecommerce-site",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/ecommerce-site"
+  },
+  {
+    "name": "REST Api Of Movies",
+    "site_url": "",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/rest-api"
+  }
+]

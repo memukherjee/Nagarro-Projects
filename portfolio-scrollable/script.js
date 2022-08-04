@@ -50,10 +50,8 @@ function showModal(element) {
     frameMsg.innerHTML = "Loading...";
     frameMsg.style.display = "Block";
     const frameLink = element.target.nextElementSibling.firstElementChild.href;
-    console.log(frameLink);
     projectFrame.src = frameLink;
     projectFrame.onload = function () {
-      console.log("loaded");
       projectFrame.style.display = "block";
       frameMsg.style.display = "none";
     };
@@ -128,8 +126,6 @@ function sendMail(e) {
   const message = document.querySelector("#message");
   const token = "903f6cf4-d6d5-4291-a279-e9c511abd0ea";
 
-  console.log(name, email, message);
-
   e.preventDefault();
   Email.send({
     SecureToken: token,
@@ -146,3 +142,53 @@ function sendMail(e) {
     })
     .catch((err) => console.log(err));
 }
+
+
+// Populate Projects
+function readTextFile(file, callback) {
+  var rawFile = new XMLHttpRequest();
+  rawFile.overrideMimeType("application/json");
+  rawFile.open("GET", file, true);
+  rawFile.onreadystatechange = function () {
+    if (rawFile.readyState === 4 && rawFile.status == "200") {
+      callback(rawFile.responseText);
+    }
+  };
+  rawFile.send(null);
+}
+
+readTextFile("../projects.json", function (text) {
+  var data = JSON.parse(text);
+  var projects = document.querySelector("#project-body");
+  projects.innerHTML = "";
+  data.forEach((project) => {
+    let inner = ""
+    inner += 
+    `<tr class="project">
+      <td onclick="showModal(event)"> 
+        <span>
+          ${project.name}
+        </span>
+      </td>
+      <td>`
+    url_base = "https://memukherjee.github.io/Nagarro-Projects";
+    let site_url = project.site_url;
+    if(!project.site_url.includes(".")){
+      site_url = url_base + project.site_url;
+    }
+    if(project.site_url!==""){
+      inner+=
+      `<a href="${site_url}" target="_blank" rel="noopener noreferrer" class="project-link">
+          <i class="fa-solid fa-link"></i>
+        </a>`
+    }
+    inner+=
+    `</td>
+    <td>
+        <a href="${project.repo_url}" target="_blank" class="project-link" rel="noopener noreferrer"><i class="fa-solid fa-code"></i></a>
+      </td>
+    </tr>`
+    projects.innerHTML += inner;
+  }
+  );
+})
