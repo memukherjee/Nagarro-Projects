@@ -138,5 +138,10 @@
     "name": "REST Api Of Movies",
     "site_url": "",
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/rest-api"
+  },
+  {
+    "name": "Stripe Integration",
+    "site_url": "",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/stripe-project"
   }
 ]
