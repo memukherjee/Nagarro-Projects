@@ -143,5 +143,10 @@
     "name": "Stripe Integration",
     "site_url": "",
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/stripe-project"
+  },
+  {
+    "name": "REST Api using harperDB",
+    "site_url": "",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/rest-api-harperDB"
   }
 ]
