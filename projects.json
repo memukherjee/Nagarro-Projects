@@ -148,5 +148,15 @@
     "name": "REST Api using harperDB",
     "site_url": "",
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/rest-api-harperDB"
+  },
+  {
+    "name": "CRUD App using MongoDB",
+    "site_url": "",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/CRUD-App"
+  },
+  {
+    "name": "Twitter Clone",
+    "site_url": "",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/twitter-clone"
   }
 ]
