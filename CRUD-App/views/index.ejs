@@ -10,20 +10,69 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
+    <script
+      defer
+      src="https://kit.fontawesome.com/95f68113d2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      body {
+        background-color: #909090;
+      }
+      .container {
+        max-width: 600px;
+      }
+      .form-control {
+        background: rgba(0, 0, 0, 0.33) !important;
+        color: #fff !important;
+        outline: none !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+      .form-control::placeholder {
+        color: rgb(131, 131, 131);
+      }
+      .list-group-item {
+        word-break: break-all;
+        background-color: rgb(254, 255, 187);
+        border: 2px solid;
+      }
+      .list-group-item .buttons {
+        min-width: 90px;
+      }
+    </style>
   </head>
   <body>
-    <div class="container text-center">
+    <div class="container">
       <h1 class="display-3 text-center mb-4">Messages</h1>
-      <form class="mb-3" action="/message" method="post">
-        <input type="text" name="message" id="msg" class="form-control d-inline w-auto">
-        <input type="submit" value="Submit" class="btn btn-dark">
+      <form
+        class="mb-3 d-flex justify-content-center align-items-center"
+        action="/message"
+        method="post"
+      >
+        <input
+          type="text"
+          name="message"
+          id="msg"
+          class="form-control d-inline"
+          autocomplete="off"
+          placeholder="Add message"
+        />
+        <input type="submit" value="Add" class="btn btn-outline-dark ms-2" />
       </form>
-      <ul>
+      <ul class="list-group">
         <% messages.forEach(message=>{ %>
-        <li>
-            <span class="me-3"><%= message.data %></span>
-            <a class="btn btn-warning" href="/edit/<%= message._id %> ">Edit</a>
-            <a class="btn btn-danger" href="/delete/<%= message._id %> ">Delete</a>
+        <li class="list-group-item d-flex justify-content-between">
+          <span class="me-3"><%= message.data %></span>
+          <span class="buttons">
+            <a class="btn btn-warning edit-btn" href="/edit/<%= message._id %>">
+              <i class="fa-solid fa-pen-to-square"></i>
+            </a>
+            <a class="btn btn-danger" href="/delete/<%= message._id %> ">
+              <i class="fa-solid fa-trash-can"></i>
+            </a>
+          </span>
         </li>
         <% }) %>
       </ul>
@@ -33,5 +82,6 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/message', (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
     const message = new Message({ data: req.body.message });
     message.save();
     res.redirect('/');
@@ -50,6 +50,7 @@ app.get('/edit/:messageId', (req, res) => {
 })
 
 app.post('/edit/:messageId', (req, res) => {
+    // console.log(req.params.messageId);
     Message.findByIdAndUpdate(req.params.messageId, { data: req.body.message }, (err) => {
         if(err)
             console.log(err);
