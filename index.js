@@ -1,5 +1,15 @@
 const card = document.querySelector(".card");
 const about = document.querySelector(".about");
+const avatar = document.querySelector(".avatar");
+
+document.addEventListener("DOMContentLoaded", function () {
+  avatar.classList.remove('img-cap');
+  avatar.addEventListener('transitionend',()=>{
+    document.querySelector('.projects').classList.remove('invisible');
+    document.querySelector('.info').classList.remove('info-start');
+  })
+})
+
 function turnFront() {
   about.classList.add("hide-about");
   about.addEventListener(
@@ -36,14 +46,22 @@ async function turnBack() {
 }
 
 card.addEventListener("click", (e) => {
-  if (!e.target.parentElement.classList.contains("project-link")) {
-    if (card.classList.contains("cardFront")) {
-      turnBack();
-    } else if (card.classList.contains("cardBack")) {
-      turnFront();
-    }
+  if (card.classList.contains("cardFront")) {
+    turnBack();
+  } else if (card.classList.contains("cardBack")) {
+    turnFront();
   }
 });
+
+document.querySelector(".projects").addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+document.querySelectorAll(".info span").forEach((e) =>
+  e.addEventListener("click", (e) => {
+    e.stopPropagation();
+  })
+);
 
 // Dark mode
 
@@ -96,28 +114,26 @@ readTextFile("projects.json", function (text) {
   var projects = document.querySelector("#project-body");
   projects.innerHTML = "";
   data.forEach((project) => {
-    let inner = ""
-    inner += 
-    `<tr>
+    let inner = "";
+    inner += `<tr>
       <td> 
         <span>
           ${project.name}
         </span>
       </td>
-      <td>`
-    if(project.site_url!==""){
-      inner+=
-      `<a href="${"."+project.site_url}" target="_blank" rel="noopener noreferrer" class="project-link">
+      <td>`;
+    if (project.site_url !== "") {
+      inner += `<a href="${
+        "." + project.site_url
+      }" target="_blank" rel="noopener noreferrer" class="project-link">
           <i class="fa-solid fa-link"></i>
-        </a>`
+        </a>`;
     }
-    inner+=
-    `</td>
+    inner += `</td>
     <td>
         <a href="${project.repo_url}" target="_blank" class="project-link" rel="noopener noreferrer"><i class="fa-solid fa-code"></i></a>
       </td>
-    </tr>`
+    </tr>`;
     projects.innerHTML += inner;
-  }
-  );
-})
+  });
+});
