@@ -124,7 +124,7 @@ readTextFile("projects.json", function (text) {
       <td>`;
     if (project.site_url !== "") {
       inner += `<a href="${
-        "." + project.site_url
+        project.site_url
       }" target="_blank" rel="noopener noreferrer" class="project-link">
           <i class="fa-solid fa-link"></i>
         </a>`;

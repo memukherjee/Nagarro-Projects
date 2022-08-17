@@ -1,6 +1,41 @@
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
+const LocalStrategy = require("passport-local").Strategy;
+const bcrypt = require("bcrypt");
 const db = require("./dbConfig");
 module.exports = function (passport) {
+  passport.use(
+    new LocalStrategy({ usernameField: "email" }, (email, password, done) => {
+      db.searchByValue({
+        table: "user",
+        searchAttribute: "email",
+        searchValue: email,
+        attributes: ["*"],
+      })
+        .then((result) => {
+          // console.log(result);
+          const users = result.data;
+          if (users.length === 0) {
+            return done(null, false, { message: "No user found" });
+          }
+          else{
+            const foundUser = users[0];
+            bcrypt.compare(password, foundUser.password, (err, isMatch) => {
+              if (err) throw err;
+              if (isMatch) {
+                return done(null, foundUser);
+              } else {
+                return done(null, false, { message: "Password incorrect" });
+              }
+            })
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+          return done(err);
+        });
+    })
+  );
+
   passport.use(
     new GoogleStrategy(
       {
@@ -9,37 +44,39 @@ module.exports = function (passport) {
         callbackURL: `${process.env.BASE_URL}/auth/google/callback`,
       },
       function (accessToken, refreshToken, profile, cb) {
+        // console.log(profile);
         db.searchByValue({
           table: "user",
-          searchAttribute: "googleId",
-          searchValue: profile.id,
+          searchAttribute: "email",
+          searchValue: profile.emails[0].value,
           attributes: ["*"],
         })
           .then((result) => {
-            // console.log(result);
             const userData = result.data;
+            // console.log(userData[0]);
             if (userData.length > 0) {
-              return cb(null, userData[0]);
+              return cb(null, { id: userData[0].id });
             } else {
-
-
               db.insert({
                 table: "user",
-                records: [{
-                  googleId: profile.id,
-                  name: profile.displayName,
-                  email: profile.emails[0].value,
-                }],
-              }).then((result) => {
-                // console.log(result);
-                return cb(null, {id: result.data.inserted_hashes[0]});
+                records: [
+                  {
+                    googleId: profile.id,
+                    name: profile.displayName,
+                    email: profile.emails[0].value,
+                    avatar: profile.photos[0].value,
+                    username: profile.emails[0].value.split("@")[0],
+                  },
+                ],
               })
-              .catch((err) => {
-                console.log(err);
-                return cb(err, null);
-              });
-
-
+                .then((result) => {
+                  // console.log(result.data.inserted_hashes[0]);
+                  return cb(null, { id: result.data.inserted_hashes[0] });
+                })
+                .catch((err) => {
+                  console.log(err);
+                  return cb(err, null);
+                });
             }
           })
           .catch((err) => {
@@ -51,12 +88,12 @@ module.exports = function (passport) {
   );
 
   passport.serializeUser(function (user, done) {
-    console.log("serializeUser");
+    // console.log("serializeUser");
     done(null, user.id);
   });
 
   passport.deserializeUser(function (id, done) {
-    console.log("deserializeUser");
+    // console.log("deserializeUser");
     db.searchByHash(
       {
         table: "user",

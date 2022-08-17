@@ -1,37 +1,37 @@
 [
   {
     "name": "Pokemon Website",
-    "site_url": "/pokemon",
+    "site_url": "./pokemon",
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/pokemon"
   },
   {
     "name": "Portfolio Website",
-    "site_url": "/portfolio",
+    "site_url": "./portfolio",
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/portfolio"
   },
   {
     "name": "Product Page (Tailwind Project)",
-    "site_url": "/tailwind-project-flora",
+    "site_url": "./tailwind-project-flora",
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/tailwind-project-flora"
   },
   {
     "name": "To-Do App (JQuery Project)",
-    "site_url": "/ToDoApp-jQuery",
+    "site_url": "./ToDoApp-jQuery",
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/ToDoApp-jQuery"
   },
   {
     "name": "Form Validation (Bootstrap + JQuery)",
-    "site_url": "/jQuery-form-validation",
+    "site_url": "./jQuery-form-validation",
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/jQuery-form-validation"
   },
   {
     "name": "Number Facts App",
-    "site_url": "/number-fact-api-project",
+    "site_url": "./number-fact-api-project",
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/number-fact-api-project"
   },
   {
     "name": "Cricket Score App",
-    "site_url": "/cricket-score-app",
+    "site_url": "./cricket-score-app",
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/cricket-score-app"
   },
   {
@@ -41,12 +41,12 @@
   },
   {
     "name": "To-Do App (JS Project)",
-    "site_url": "/ToDoApp-JS",
+    "site_url": "./ToDoApp-JS",
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/ToDoApp-JS"
   },
   {
     "name": "Copy To Clipboard",
-    "site_url": "/copy-text",
+    "site_url": "./copy-text",
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/copy-text"
   },
   {
@@ -56,7 +56,7 @@
   },
   {
     "name": "Modal Page",
-    "site_url": "/modal-page",
+    "site_url": "./modal-page",
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/modal-page"
   },
   {
@@ -66,7 +66,7 @@
   },
   {
     "name": "Image Slider",
-    "site_url": "/image-slider",
+    "site_url": "./image-slider",
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/image-slider"
   },
   {
@@ -86,12 +86,12 @@
   },
   {
     "name": "Calculator",
-    "site_url": "/calculator",
+    "site_url": "./calculator",
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/calculator"
   },
   {
     "name": "Weight Convertor",
-    "site_url": "/weight-conversion",
+    "site_url": "./weight-conversion",
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/weight-conversion"
   },
   {
@@ -101,37 +101,37 @@
   },
   {
     "name": "OMDB Movie Finder",
-    "site_url": "/OMDB-api",
+    "site_url": "./OMDB-api",
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/OMDB-api"
   },
   {
     "name": "Search Bar Project",
-    "site_url": "/js-searchbar",
+    "site_url": "./js-searchbar",
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/js-searchbar"
   },
   {
     "name": "Theme Changer Project",
-    "site_url": "/theme-changer",
+    "site_url": "./theme-changer",
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/theme-changer"
   },
   {
     "name": "Twitter Sign Up Page",
-    "site_url": "/twitter-signup-page",
+    "site_url": "./twitter-signup-page",
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/twitter-signup-page"
   },
   {
     "name": "Scrollable Portfolio",
-    "site_url": "/portfolio-scrollable",
+    "site_url": "./portfolio-scrollable",
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/portfolio-scrollable"
   },
   {
     "name": "SMTP Project",
-    "site_url": "/smtp-project",
+    "site_url": "./smtp-project",
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/smtp-project"
   },
   {
     "name": "E-Commerce Website Clone (BoAt)",
-    "site_url": "/ecommerce-site",
+    "site_url": "./ecommerce-site",
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/ecommerce-site"
   },
   {

@@ -24,8 +24,9 @@ app.use(passport.session());
 
 initializePassport(passport);
 
-app.use("/", require("./routes"));
 app.use('/auth', require('./routes/auth'));
+app.use('/tweet', require('./routes/tweet'));
+app.use("/", require("./routes"));
 
 app.listen(process.env.PORT, () =>
   console.log(`Server is running on port ${process.env.PORT}`)

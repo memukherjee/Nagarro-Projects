@@ -14,9 +14,71 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- local-signup-modal -->
+    <div id="local-signup-modal" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h5 class="modal-title">Sign Up</h5>
+          </div>
+          <div class="modal-body">
+            <h3 class="heading">Create your account</h3>
+            <form action="/auth/signUp" method="post" id="local-signup-form">
+              <div class="form-floating">
+                <input type="text" name="name" class="form-control name-input" id="name-input-local" placeholder="name">
+                <label for="name-input-local">Full Name</label>
+              </div>
+              <div class="form-floating">
+                <input type="email" name="email" class="form-control email-input" id="email-input-local" placeholder="email id">
+                <label for="email-input-local">Email Address</label>
+              </div>
+              <div class="form-floating">
+                <input type="password" name="password" class="form-control password-input" id="password-input-local" placeholder="password">
+                <label for="password-input-local">Password</label>
+              </div>
+              <div class="form-floating">
+                <input type="password" name="confirmPassword" class="form-control confirm-password-input" id="confirm-password-input-local" placeholder="confirm password">
+                <label for="confirm-password-input-local">Confirm Password</label>
+              </div>
+              <button type="submit" class="btn btn-light rounded-pill signup-btn">Sign Up</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- local-login-modal -->
+    <div id="local-login-modal" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h5 class="modal-title">Log in</h5>
+          </div>
+          <div class="modal-body">
+            <h3 class="heading">Sign in to your account</h3>
+            <form action="/auth/login" method="post" id="local-login-form">
+              <div class="form-floating">
+                <input type="email" name="email" class="form-control email-input" id="email-input-login" placeholder="email id">
+                <label for="email-input-login">Email Address</label>
+              </div>
+              <div class="form-floating">
+                <input type="password" name="password" class="form-control password-input" id="password-input-login" placeholder="password">
+                <label for="password-input-login">Password</label>
+              </div>
+              <button type="submit" class="btn btn-light rounded-pill login-btn">Log in</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <div class="row flex-row-reverse">
       <div class="right-col col-md-5">
         <div class="logo">
@@ -37,7 +99,7 @@
           </div>
           <span class="or">or</span>
           <hr />
-          <a class="btn btn-signup rounded-pill"> Sign up with phone or email </a>
+          <a id="local-signup-modal-btn" class="btn btn-signup rounded-pill" data-bs-toggle="modal" data-bs-target="#local-signup-modal"> Sign up with phone or email </a>
           <div class="terms mt-3">
             <span class="text-muted">
               By signing up, you agree to the <a href="https://twitter.com/tos" target="_blank" rel="noopener noreferrer">Terms of Service</a> and <a href="https://twitter.com/privacy" target="_blank" rel="noopener noreferrer">Privacy
@@ -47,7 +109,7 @@
 
           <div class="signin-label">
             <h6>Already have an account?</h6>
-            <a href="#" class="btn btn-signin d-block rounded-pill">Sign in</a>
+            <a id="local-login-modal-btn" data-bs-toggle="modal" data-bs-target="#local-login-modal" class="btn btn-signin d-block rounded-pill">Sign in</a>
           </div>
         </div>
       </div>

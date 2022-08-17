@@ -132,6 +132,79 @@ hr {
     color: #fff;
 }
 
+.modal-backdrop {
+  background-color: rgba(91, 112, 131);
+}
+
+.modal-content{
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-radius: 15px;
+}
+
+.modal-header{
+  justify-content: flex-start;
+  border: 0;
+}
+
+.modal-close{
+  margin: 0 1rem 0 0 !important;
+  padding: 0 !important;
+  filter: invert(1);
+}
+
+.modal-title{
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.modal-body{
+  padding: 0 4rem 2.5rem;
+}
+
+.modal-body .heading{
+  font-size: 2rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+  margin: 1rem 0 2rem;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+.form-floating{
+  margin-bottom: 1rem;
+}
+
+.modal-body .form-control{
+  background-color: transparent;
+  border: 1px solid rgba(170, 170, 170, 0.5);
+  box-shadow: none;
+  outline: none;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus input:-webkit-autofill {
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+  background-color: transparent;
+  font-size: 1rem;
+  caret-color: #fff;
+  border: 1px solid rgba(170, 170, 170, 0.5);
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-internal-autofill-selected {
+  appearance: menulist-button;
+  background-image: none !important;
+  background-color: transparent !important;
+  color: #fff !important;
+}
+
+#local-login-modal .login-btn,
+#local-signup-modal .signup-btn{
+  width: 100%;;
+}
+
 .terms {
   font-size: 0.75rem;
   line-height: 12px;
