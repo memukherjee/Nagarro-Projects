@@ -31,9 +31,8 @@ module.exports.getTweets = (req, res) => {
 };
 
 module.exports.getTrendingTweets = (req, res) => {
-
   db.query(
-    `SELECT u.id as userId, u.avatar as avatar, u.email as email, u.name as name, u.username as username, t.id as tweetId, t.tweet as tweet, t.likeCount as likeCount, t.__createdtime__ as tweetTime, l.isLiked as isLiked FROM twitter.tweets as t INNER JOIN twitter.user as u ON u.id = t.userId LEFT OUTER JOIN twitter.tweetLikes as l on t.id = l.tweetId AND l.userId = "${userId}" ORDER BY t.__createdtime__ DESC` /*LIMIT 10*/
+    `SELECT u.id as userId, u.avatar as avatar, u.name as name, u.username as username, t.id as tweetId, t.tweet as tweet, t.__createdtime__ as tweetTime FROM twitter.tweets as t INNER JOIN twitter.user as u ON u.id = t.userId ORDER BY t.likeCount DESC LIMIT 5`
   )
     .then((result) => {
       const tweets = result.data;
@@ -55,8 +54,7 @@ module.exports.getTrendingTweets = (req, res) => {
       console.log(err);
       res.send([]);
     });
-
-}
+};
 
 module.exports.addTweet = (req, res) => {
   const { tweet, userId } = req.body;
@@ -124,6 +122,36 @@ module.exports.likeTweet = (req, res) => {
       }
     );
   } else {
+    res.status(401).send("Unauthorized");
+  }
+};
+
+module.exports.deleteTweet = (req, res) => {
+  if (req.isAuthenticated()) {
+    const { tweetId, userId } = req.body;
+    const currentUserId = req.user.data[0].id;
+    // console.log(currentUserId);
+    if(currentUserId === userId){
+      db.delete(
+        {
+          table: "tweets",
+          hashValues: [tweetId],
+        },
+        (err, result) => {
+          if (err) {
+            console.log(err);
+            res.status(500).send("Error");
+          } else {
+            res.status(200).send("Success");
+          }
+        }
+      );
+    }
+    else{
+      res.status(401).send("Unauthorized");
+    }
+  }
+  else{
     res.status(401).send("Unauthorized");
   }
 };

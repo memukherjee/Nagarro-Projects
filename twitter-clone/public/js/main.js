@@ -28,3 +28,32 @@ likeBtns.forEach((likeBtn) => {
     });
   });
 });
+
+document.querySelector("#tweet-form").addEventListener("submit", (e) => {
+  if(document.getElementById("tweet").value===""){
+    e.preventDefault();
+  }
+})
+
+document.querySelectorAll(".delete-tweet").forEach((deleteBtn) => {
+  deleteBtn.addEventListener("click", () => {
+    const tweetId = deleteBtn.getAttribute("data-tweet-id");
+    const userId = deleteBtn.getAttribute("data-tweet-user");
+    // console.log(tweetId);
+    const data = {
+      tweetId,
+      userId,
+    };
+    fetch("/tweet/delete", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    }).then((res) => {
+      console.log("Request complete! response:", res);
+    }).then(() => {
+      window.location.reload();
+    }).catch((err) => {
+      console.log(err);
+    })
+  })
+})

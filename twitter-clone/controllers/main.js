@@ -9,7 +9,16 @@ module.exports.getMainPage = (req, res) => {
       .then((result) => {
         const tweets = result.data;
         // console.log(tweets);
-        res.render("main", { page: req.params.page, tweets, userData });
+        axios.get(`${process.env.BASE_URL}/tweet/trending`)
+        .then(trendingResult => {
+          const trendingTweets = trendingResult.data;
+          // console.log(trendingTweets);
+          res.render("main", { page: req.params.page, tweets, userData, trendingTweets });
+        })
+        .catch(err => {
+          console.log(err);
+          res.redirect("/");
+        });
       })
       .catch((err) => {
         console.log(err);

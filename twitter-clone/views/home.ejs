@@ -9,7 +9,7 @@
       </span>
     </nav>
     <div class="form-container">
-      <form action="/tweet" method="post">
+      <form action="/tweet" id="tweet-form" method="post">
         <div class="avatar">
           <img
             src="<%= userData.avatar %> "
@@ -91,6 +91,11 @@
           </span>
         </div>
       </div>
+      <% if (tweet.userId===userData.id) { %>
+        <button class="delete-tweet" data-tweet-id="<%= tweet.tweetId %>" data-tweet-user="<%= tweet.userId %>">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
+      <% } %>
     </div>
     <% }) %>
   </div>
