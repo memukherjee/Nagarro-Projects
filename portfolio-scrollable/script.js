@@ -173,8 +173,8 @@ readTextFile("../projects.json", function (text) {
       <td>`
     url_base = "https://memukherjee.github.io/Nagarro-Projects";
     let site_url = project.site_url;
-    if(!project.site_url.includes(".")){
-      site_url = url_base + project.site_url;
+    if(project.site_url.slice(0,1)==="."){
+      site_url = url_base + project.site_url.slice(1);
     }
     if(project.site_url!==""){
       inner+=
