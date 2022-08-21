@@ -130,7 +130,7 @@
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/smtp-project"
   },
   {
-    "name": "E-Commerce Website Clone (BoAt)",
+    "name": "E-Commerce Website Frontend (BoAt)",
     "site_url": "./ecommerce-site",
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/ecommerce-site"
   },
@@ -163,5 +163,10 @@
     "name": "Twitter Clone",
     "site_url": "https://me-twitter.herokuapp.com/",
     "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/twitter-clone"
+  },
+  {
+    "name": "E-Commerce Clone",
+    "site_url": "https://me-ekart.herokuapp.com/",
+    "repo_url": "https://github.com/memukherjee/Nagarro-Projects/tree/main/ecommerce-clone"
   }
 ]
