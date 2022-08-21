@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home / Twitter</title>
+    <title><%= title %>  / Twitter</title>
     <link
       rel="shortcut icon"
       href="images/favicon/favicon.ico"
@@ -31,7 +31,7 @@
     <script defer src="js/main.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="page" data-page="<%= page %> ">
       <div class="sidebar">
         <div class="sidebar-container">
           <div class="nav-logo">
@@ -41,22 +41,28 @@
           </div>
           <div class="nav-links">
             <ul>
-              <li class="active-link">
+              <li <%= page==="home"?`class=active-link`:"" %>>
                 <a href="/home">
                   <i class="fa-solid fa-house"></i>
                   <span>Home</span>
                 </a>
               </li>
-              <li>
+              <li <%= page==="explore"?`class=active-link`:"" %>>
                 <a href="/explore">
                   <i class="fa-solid fa-hashtag"></i>
                   <span>Explore</span>
                 </a>
               </li>
-              <li>
+              <!-- <li <%= page==="notifications"?`class=active-link`:"" %>>
                 <a href="/notifications">
                   <i class="fa-solid fa-bell"></i>
                   <span>Notifications</span>
+                </a>
+              </li> -->
+              <li <%= page==="profile"?`class=active-link`:"" %>>
+                <a href="/profile">
+                  <i class="fa-solid fa-user"></i>
+                  <span>Profile</span>
                 </a>
               </li>
               <li>

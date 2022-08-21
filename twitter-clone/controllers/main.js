@@ -1,4 +1,5 @@
 const axios = require("axios");
+const _ = require("lodash");
 
 module.exports.getMainPage = (req, res) => {
   if (req.isAuthenticated()) {
@@ -13,7 +14,7 @@ module.exports.getMainPage = (req, res) => {
         .then(trendingResult => {
           const trendingTweets = trendingResult.data;
           // console.log(trendingTweets);
-          res.render("main", { page: req.params.page, tweets, userData, trendingTweets });
+          res.render("main", { page: req.params.page, tweets, userData, trendingTweets, title: _.capitalize(req.params.page) });
         })
         .catch(err => {
           console.log(err);
