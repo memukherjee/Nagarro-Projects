@@ -126,6 +126,22 @@ a:hover {
 	color: #fff;
 }
 
+.nav-searchbar{
+	height: 100%;
+	border: none;
+	outline: none;
+	padding: .5rem 1rem;
+	padding-right: 3rem;
+	border-radius: 2px;
+	box-shadow: 0 2px 2px #091832a5;
+}
+
+.search-icon{
+	margin-left: -2rem;
+	margin-right: 2rem;
+	color: #2874f0;
+}
+
 .category-container{
 	border: 5px solid #f1c90d;
 	color: #2874f0;

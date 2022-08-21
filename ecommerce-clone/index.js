@@ -41,12 +41,13 @@ app.use(function(req,res,next){
 	next();
 });
 
-var indexRoutes = require("./routes/index");
-var productRoutes = require("./routes/product");
-var reviewRoutes = require("./routes/review");
-var cartRoutes = require("./routes/cart");
-var checkoutRoutes = require("./routes/checkout");
-var orderRoutes = require("./routes/order");
+const indexRoutes = require("./routes/index");
+const productRoutes = require("./routes/product");
+const reviewRoutes = require("./routes/review");
+const cartRoutes = require("./routes/cart");
+const checkoutRoutes = require("./routes/checkout");
+const orderRoutes = require("./routes/order");
+const searchRoutes = require("./routes/search");
 
 app.use(reviewRoutes);
 app.use(orderRoutes);
@@ -54,6 +55,7 @@ app.use("/",indexRoutes)
 app.use("/products",productRoutes);
 app.use("/cart",cartRoutes)
 app.use("/checkout",checkoutRoutes);
+app.use("/search",searchRoutes);
 
 OrderCount.find({},function(err,orderCountObjects){
 	if(orderCountObjects.length==0) {
