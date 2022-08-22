@@ -10,7 +10,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
-  "author": "",
+  "author": "Akash Mukherjee",
   "license": "ISC",
   "dependencies": {
     "connect-flash": "^0.1.1",

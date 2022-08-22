@@ -3,8 +3,8 @@ const axios = require("axios");
 require('dotenv').config()
 
 const apiKey = process.env.WEATHER_API_KEY;
-const longitude = 77.209;
-const latitude = 28.6139;
+const longitude = 87.85820007324219;
+const latitude = 23.25279998779297;
 
 const city = "asansol";
 const countryCode = "IN";
@@ -17,7 +17,7 @@ const url3 = `https://api.openweathermap.org/data/2.5/weather?q=${city},${stateC
 http
   .createServer(function (request, response) {
     axios
-      .get(url3)
+      .get(url1)
       .then((res) => res.data)
       .then((data) => {
         response.write(`<html>

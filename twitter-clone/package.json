@@ -23,7 +23,7 @@
     "dev": "nodemon index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Akash Mukherjee",
   "license": "ISC",
   "description": ""
 }
