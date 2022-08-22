@@ -16,11 +16,11 @@ router.get("/",function(req,res){
 	});
 });
 
-router.get("/new",isAdmin,function(req,res){
+router.get("/new",function(req,res){
 	res.render("products/new");
 });
 
-router.post("/",isAdmin,function(req,res){
+router.post("/",function(req,res){
 	req.body.product.discount = req.body.product.mrp-req.body.product.price;
 	req.body.product.disc_perc = Math.round(((req.body.product.mrp-req.body.product.price)*100)/req.body.product.mrp);
 	Product.create(req.body.product,function(err,product){
